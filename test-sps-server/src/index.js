@@ -12,7 +12,8 @@ app.use(cors());
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
 
+const PORT = process.env.PORT || 4000; // Definir la variable PORT
 app.use(routes);
-app.listen(process.env.PORT, () => {
-  console.log("Server is running on http://localhost:{$PORT}");
-});
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+  });
