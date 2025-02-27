@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch", // Inicia el proceso de Node.js directamente
+      "name": "Launch Program", // Nombre de la configuración
+      "skipFiles": ["<node_internals>/**"], // Ignora archivos internos de Node.js
+      "program": "${workspaceFolder}/src/index.js", // Ruta al archivo de entrada
+      "outFiles": ["${workspaceFolder}/**/*.js"], // Archivos a incluir
+      "console": "integratedTerminal", // Usa la terminal integrada de VS Code
+      "internalConsoleOptions": "neverOpen" // No abrir la consola interna
+    },
+    {
+      "type": "node",
+      "request": "attach", // Adjuntar a un proceso en ejecución
+      "name": "Attach to Process", // Nombre de la configuración
+      "port": 7000, // Puerto de depuración
+      "protocol": "inspector" // Usa el protocolo inspector
+    }
+  ]
+}
