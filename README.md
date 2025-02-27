@@ -15,12 +15,14 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado:
 - [MongoDB](https://www.mongodb.com/) (si usa base de datos)
 - Git (opcional, pero recomendado)
 
+---
+
 - Levantar API Node
 - cd test-sps-server/
 - npm install
 - npm ./src/index.js
 
-
+---
 
 - Levantar WEB React
 - cd test-sps-react-main/
