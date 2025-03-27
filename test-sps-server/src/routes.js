@@ -33,6 +33,7 @@ routes.post('/login', (req, res) => {
 
     if (user) {
         const accessToken = jwt.sign({ email: user.email, type: user.type }, SECRET_KEY);
+        //const accessToken = jwt.sign({ email: user.email}, SECRET_KEY);
         res.json({ accessToken, type: user.type });
     } else {
         res.status(401).send('Credenciales incorrectas');
