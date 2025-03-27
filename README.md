@@ -20,7 +20,7 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado:
 - Levantar API Node
 - cd test-sps-server/
 - npm install
-- npm ./src/index.js
+- node ./src/index.js
 
 ---
 
