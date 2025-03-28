@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./test-sps-server
+      dockerfile: Dockerfile      
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+   # volumes:
+   # - ./src:/app/src  # Opcional: montar código para desarrollo
+  frontend:
+    build:
+      context: ./test-sps-react-main
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
