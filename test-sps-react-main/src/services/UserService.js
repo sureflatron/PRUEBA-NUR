@@ -1,7 +1,7 @@
 import axios from "axios";
 //import 'dotenv/config';
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:4000";
+const API_URL = process.env.REACT_APP_API_URL || "http://10.0.0.124:4000";
 
 const UserService = {
     //Iniciar sesión
