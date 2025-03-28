@@ -5,8 +5,13 @@ const app = express();
 require('dotenv').config();
 
 
-app.use(cors());
-
+//pp.use(cors());
+const cors = require('cors');
+app.use(cors({
+  origin: 'http://localhost:3000', // URL de tu frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 
 app.use(express.json()); 
